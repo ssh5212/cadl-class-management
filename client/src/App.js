@@ -72,10 +72,11 @@ class App extends Component {
                     </TableHead>
                     <TableBody>
                         {this.state.customers ? (
-                            this.state.customers.map(c => {
+                            this.state.customers.map((c, index) => {
                                 return (
                                     <Customer
-                                        key={c.id}
+                                        key={c.index}
+                                        // key={c.id}
                                         id={c.id}
                                         name={c.name}
                                         studentId={c.studentId}
